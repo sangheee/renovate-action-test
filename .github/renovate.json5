@@ -16,7 +16,7 @@
   "requireConfig": "ignored",
   "timezone": "Asia/Seoul",
   // repo config
-  "repositories": ["park-sanghee/argocd-test"],
+  "repositories": ["sangheee/renovate-action-test"],
   "ignorePaths": [],
   "username": "renovate[bot]",
   "gitAuthor": "renovate[bot] <oss-user-bot[bot]@users.noreply.github.com>",
