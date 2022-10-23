@@ -1,0 +1,31 @@
+
+   
+{
+  "extends": [
+    "config:base",
+    "docker:enableMajor",
+    ":disableRateLimiting",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    "group:monorepos",
+    "group:recommended",
+    "github>whitesource/merge-confidence:beta"
+  ],
+  "platform": "github",
+  "onboarding": false,
+  "requireConfig": "ignored",
+  "timezone": "Asia/Seoul",
+  // repo config
+  "repositories": ["park-sanghee/argocd-test"],
+  "ignorePaths": [],
+  "username": "renovate[bot]",
+  "gitAuthor": "renovate[bot] <oss-user-bot[bot]@users.noreply.github.com>",
+  // PR config
+  "dependencyDashboardTitle": "Dependency Dashboard 🤖",
+  "dependencyDashboardHeader": "",
+  "prFooter": "",
+  "suppressNotifications": ["prIgnoreNotification"],
+  "rebaseWhen": "conflicted",
+  "commitBodyTable": true,
+  "prHourlyLimit": 1
+}
