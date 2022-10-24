@@ -18,6 +18,7 @@
       "matchDatasources": ["docker", "git-tags", "helm","github-tags", "github-releases"]
     }
   ],
+  "baseBranches":["main","test"],
   "platform": "github",
   "onboarding": false,
   "requireConfig": "ignored",
