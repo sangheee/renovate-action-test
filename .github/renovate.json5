@@ -12,6 +12,12 @@
   "argocd": {
     "fileMatch": ["\\.yaml$"]
   },
+  "packageRules": [
+    {
+      "matchDatasources": ["argocd"],
+      "matchDatasources": ["docker", "git-tags", "helm","github-tags", "github-release"]
+    }
+  ],
   "platform": "github",
   "onboarding": false,
   "requireConfig": "ignored",
