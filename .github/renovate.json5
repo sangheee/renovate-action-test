@@ -15,7 +15,7 @@
   "packageRules": [
     {
       "matchDatasources": ["argocd"],
-      "matchDatasources": ["docker", "git-tags", "helm","github-tags", "github-release"]
+      "matchDatasources": ["docker", "git-tags", "helm","github-tags", "github-releases"]
     }
   ],
   "platform": "github",
