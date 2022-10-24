@@ -11,7 +11,7 @@
   ],
   "argocd": {
     "fileMatch": ["\\.yaml$"]
-  }
+  },
   "platform": "github",
   "onboarding": false,
   "requireConfig": "ignored",
