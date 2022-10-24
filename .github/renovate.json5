@@ -1,5 +1,3 @@
-
-   
 {
   "extends": [
     "config:base",
@@ -11,6 +9,9 @@
     "group:recommended",
     "github>whitesource/merge-confidence:beta"
   ],
+  "argocd": {
+    "fileMatch": ["\\.yaml$"]
+  }
   "platform": "github",
   "onboarding": false,
   "requireConfig": "ignored",
