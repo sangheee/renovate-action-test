@@ -31,6 +31,7 @@
   "dependencyDashboardTitle": "Dependency Dashboard 🤖",
   "dependencyDashboardHeader": "",
   "prFooter": "",
+  "baseBranches": ["main","test"],
   "suppressNotifications": ["prIgnoreNotification"],
   "rebaseWhen": "conflicted",
   "commitBodyTable": true,
