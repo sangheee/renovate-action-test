@@ -1,13 +1,7 @@
 {
   "extends": [
     "config:base",
-    "docker:enableMajor",
-    ":disableRateLimiting",
-    ":dependencyDashboard",
-    ":semanticCommits",
-    "group:monorepos",
-    "group:recommended",
-    "github>whitesource/merge-confidence:beta"
+    ":dependencyDashboard"
   ],
   "argocd": {
     "fileMatch": ["\\.yaml$"]
@@ -27,7 +21,7 @@
   "repositories": ["sangheee/renovate-action-test"],
   "ignorePaths": [],
   "username": "renovate[bot]",
-  "gitAuthor": "renovate[bot] <oss-user-bot[bot]@users.noreply.github.com>",
+  "gitAuthor": "renovate[bot] <renovate-bot[bot]@users.noreply.github.com>",
   // PR config
   "dependencyDashboardTitle": "Dependency Dashboard 🤖",
   "dependencyDashboardHeader": "",
