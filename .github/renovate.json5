@@ -22,7 +22,7 @@
   // repo config
   "repositories": ["sangheee/renovate-action-test"],
   "ignorePaths": [],
-  "username": "renovate[bot]",
+  "username": "sangheee",
   "gitAuthor": "renovate[bot] <renovate-bot[bot]@users.noreply.github.com>",
   // PR config
   "dependencyDashboardTitle": "Dependency Dashboard 🤖",
