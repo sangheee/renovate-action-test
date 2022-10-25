@@ -15,7 +15,7 @@
   "baseBranches":["main","test"],
   "platform": "github",
   "onboarding": false,
-  "requireConfig": "ignored",
+  "requireConfig": false,
   "timezone": "Asia/Seoul",
   // repo config
   "repositories": ["sangheee/renovate-action-test"],
