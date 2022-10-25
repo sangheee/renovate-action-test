@@ -2,6 +2,7 @@
   "extends": [
     "config:base",
     ":disableRateLimiting",
+    ":enablePreCommit",
     ":dependencyDashboard"
   ],
   "argocd": {
