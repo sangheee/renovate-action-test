@@ -10,7 +10,7 @@
   },
   "packageRules": [
     {
-      "matchDatasources": ["argocd"],
+      "matchManagers": ["argocd"],
       "matchDatasources": ["docker", "git-tags", "helm","github-tags", "github-releases"]
     }
   ],
