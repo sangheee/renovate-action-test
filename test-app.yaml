@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/sangheee/testchart
-    targetRevision: v0.0.0
+    targetRevision: test-0.0.0
     path: test
   destination:
     server: "https://kubernetes.default.svc"
