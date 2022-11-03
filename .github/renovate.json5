@@ -14,6 +14,21 @@
       "versioning": "regex:^((?<compatibility>.*)-)?v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
     }
   ],
+    "regexManagers": [
+    {
+      "description": "Process variables dependencies",
+      "fileMatch": [
+        ".yaml$",
+        ".yml$",
+        "Makefile"
+      ],
+      "matchStrings": [
+        ".*(=|:\\s)(?<currentValue>[v0-9.-]+)\\s#\\supdate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( extractVersion=(?<extractVersion>.+?))?( versioning=(?<versioning>.*?))?\\s"
+      ],
+      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    },
+  ],
   "baseBranches":["main","test"],
   "platform": "github",
   "onboarding": false,
