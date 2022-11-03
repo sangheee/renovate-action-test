@@ -4,16 +4,6 @@
     ":disableRateLimiting",
     ":dependencyDashboard"
   ],
-  "argocd": {
-    "fileMatch": ["\\.yaml$"]
-  },
-  "packageRules": [
-    {
-      "matchManagers": ["argocd"],
-      "matchDatasources": ["git-tags","github-tags", "github-releases"],
-      "versioning": "regex:^((?<compatibility>.*)-)?v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
-    }
-  ],
     "regexManagers": [
     {
       "description": "Process variables dependencies",
