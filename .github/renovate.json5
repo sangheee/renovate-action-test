@@ -35,6 +35,5 @@
   "prFooter": "",
   "suppressNotifications": ["prIgnoreNotification"],
   "rebaseWhen": "conflicted",
-  "commitBodyTable": true,
-  "prHourlyLimit": 1
+  "commitBodyTable": true
 }
