@@ -1,0 +1,1 @@
+go_version: 1.18 # update: datasource=golang-version depName=go extractVersion=^(?<version>\\d+\\.\\d+)\\.\\d+$ versioning=npm
