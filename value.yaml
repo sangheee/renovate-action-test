@@ -1,1 +1,2 @@
 go_version: 1.18 # update: datasource=golang-version depName=go extractVersion=^(?<version>\\d+\\.\\d+)\\.\\d+$ versioning=npm
+PROMU_VERSION ?= 0.13.0 # update: datasource=github-releases depName=prometheus/promu extractVersion=^(?<version>.*) \\/.*$
