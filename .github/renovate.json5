@@ -20,19 +20,10 @@
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ],
-  packageRules: [
-    {
-      matchFiles: [
-        "*_test.go"
-      ],
-      matchManagers: [
-        "kubernetes"
-      ]
-    }
-  ],
   kubernetes: {
     fileMatch: [
-      "manifests/.*\\.yaml$"
+      "manifests/.*\\.yaml$",
+      "*_test.go"
     ]
   },
   "baseBranches": [
