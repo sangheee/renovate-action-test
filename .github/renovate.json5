@@ -23,7 +23,7 @@
   kubernetes: {
     fileMatch: [
       "manifests/.*\\.yaml$",
-      "*_test.go"
+      "*_test\\.go"
     ]
   },
   "baseBranches": [
