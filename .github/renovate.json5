@@ -39,7 +39,7 @@
       "matchStrings": [
         "Registry:\\s*[\"`](?<registry>[^\"`]*)[\"`]",
         "Name:\\s*[\"`](?<name>[^\"`]*)[\"`]",
-        "Tag:\\s*[\"`](?<currentValue>[^\"`]+)[\"`]([,\\s]*\\/\\/\\supdate: versioning=(?<versioning>.*))?"
+        "Version:\\s*[\"`](?<currentValue>[^\"`]+)[\"`]([,\\s]*\\/\\/\\supdate: versioning=(?<versioning>.*))?"
       ],
       depNameTemplate: "{{registry}}/{{name}}",
       versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
