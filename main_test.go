@@ -21,9 +21,21 @@ type Spec struct {
 	Image string `json:"image"`
 }
 
+type NewSpec struct {
+	Registry string `json:"registry"`
+	Name     string `json:"name"`
+	Version  string `json:"version"`
+}
+
 func Test(t *testing.T) {
 	spec := &Spec{
 		Image: `hello-world:nanoserver-1709`, // update: versioning=regex:^(?<compatibility>.*)-(?<major>\d+)$
 	}
-	fmt.Println(testPod, spec)
+	nSpec := &NewSpec{
+		Registry: "",
+		Name:     "hello-world",
+		Version:  "nanoserver-1709", // update: versioning=regex:^(?<compatibility>.*)-(?<major>\d+)$
+	}
+
+	fmt.Println(testPod, spec, nSpec)
 }

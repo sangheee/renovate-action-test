@@ -29,7 +29,33 @@
       ],
       versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
       "datasourceTemplate": "docker",
-    }
+    },
+    {
+      "description": "Update Docker Image dependencies NewSpec struct in .+_test.go files",
+      "fileMatch": [
+        "_test.go$"
+      ],
+      matchStringsStrategy: "combination",
+      "matchStrings": [
+        "Registry:\\s*[\"`](?<registry>[^\"`]+)[\"`]",
+        "Name:\\s*[\"`](?<name>[^\"`]+)[\"`]",
+        "Tag:\\s*[\"`](?<currentValue>[^\"`]+)[\"`]([,\\s]*\\/\\/\\supdate: versioning=(?<versioning>.*))?"
+      ],
+      depNameTemplate: "{{registry}}/{{name}}",
+      versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
+      datasourceTemplate: "docker",
+    },
+    {
+      "fileMatch": [
+        "^main.yml$"
+      ],
+      "matchStringsStrategy": "combination",
+      "matchStrings": [
+        "thanos_image:\\s*\"(?<depName>.*)\"\\s*//",
+        "thanos_version:\\s*\"(?<currentValue>.*)\"\\s*//"
+      ],
+      "datasourceTemplate": "docker"
+    },
   ],
   kubernetes: {
     fileMatch: [
