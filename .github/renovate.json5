@@ -37,8 +37,8 @@
       ],
       matchStringsStrategy: "combination",
       "matchStrings": [
-        "Registry:\\s*[\"`](?<registry>[^\"`]+)[\"`]",
-        "Name:\\s*[\"`](?<name>[^\"`]+)[\"`]",
+        "Registry:\\s*[\"`](?<registry>[^\"`]*)[\"`]",
+        "Name:\\s*[\"`](?<name>[^\"`]*)[\"`]",
         "Tag:\\s*[\"`](?<currentValue>[^\"`]+)[\"`]([,\\s]*\\/\\/\\supdate: versioning=(?<versioning>.*))?"
       ],
       depNameTemplate: "{{registry}}/{{name}}",
