@@ -17,6 +17,13 @@ spec:
     ports:
     - containerPort: 80`
 
+type Spec struct {
+	Image string `json:"image"`
+}
+
 func Test(t *testing.T) {
-	fmt.Println(testPod)
+	spec := &Spec{
+		Image: `hello-world:nanoserver-1709`, // versioning=regex:^(?<compatibility>.*)-(?<major>\\d+)$
+	}
+	fmt.Println(testPod, spec)
 }
