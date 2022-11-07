@@ -41,7 +41,7 @@
         "Name:\\s*[\"`](?<name>[^\"`]*)[\"`]",
         "Version:\\s*[\"`](?<currentValue>[^\"`]+)[\"`]([,\\s]*\\/\\/\\supdate: versioning=(?<versioning>.*))?"
       ],
-      depNameTemplate: "{{registry}}/{{name}}",
+      depNameTemplate: "{{#if registry}}{{{registry}}}/{{/if}}{{{name}}}",
       versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
       datasourceTemplate: "docker",
     },
