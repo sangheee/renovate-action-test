@@ -36,6 +36,11 @@ func Test(t *testing.T) {
 		Name:     "hello-world",
 		Version:  "nanoserver-1803", // update: versioning=regex:^(?<compatibility>.*)-(?<major>\d+)$
 	}
+	nnSpec := &NewSpec{
+		Registry: "",
+		Name:     "hello-world",
+		Version:  "nanoserver-1709", // update: versioning=regex:^(?<compatibility>.*)-(?<major>\d+)$
+	}
 
-	fmt.Println(testPod, spec, nSpec)
+	fmt.Println(testPod, spec, nSpec, nnSpec)
 }
