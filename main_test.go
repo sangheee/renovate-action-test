@@ -39,7 +39,7 @@ func Test(t *testing.T) {
 	nnSpec := &NewSpec{
 		Registry: "",
 		Name:     "bitnami/kafka",
-		Version:  "3.0.2",
+		Version:  "3.3.1",
 	}
 
 	fmt.Println(testPod, spec, nSpec, nnSpec)
