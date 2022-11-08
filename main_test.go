@@ -38,8 +38,8 @@ func Test(t *testing.T) {
 	}
 	nnSpec := &NewSpec{
 		Registry: "",
-		Name:     "hello-world",
-		Version:  "nanoserver-1709", // update: versioning=regex:^(?<compatibility>.*)-(?<major>\d+)$
+		Name:     "bitnami/kafka",
+		Version:  "3.0.2",
 	}
 
 	fmt.Println(testPod, spec, nSpec, nnSpec)
