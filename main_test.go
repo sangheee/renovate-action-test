@@ -29,7 +29,7 @@ type NewSpec struct {
 
 func Test(t *testing.T) {
 	spec := &Spec{
-		Image: `hello-world:nanoserver-1709`, // update: versioning=regex:^(?<compatibility>.*)-(?<major>\d+)$
+		Image: `hello-world:nanoserver-1809`, // update: versioning=regex:^(?<compatibility>.*)-(?<major>\d+)$
 	}
 	nSpec := &NewSpec{
 		Registry: "",
