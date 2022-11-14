@@ -24,6 +24,6 @@ spec:
 
 var someConstruct = &struct{
       version  string
-    }{
-			version:  "v0.2.0", // update: datasource=github-release depName=foo/bar
-		}
+}{
+    version:  "v0.2.0", // update: datasource=github-release depName=foo/bar
+}
