@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
   - name: etcd
-    image: bitnami/etcd:3.4.20
+    image: bitnami/etcd:3.5.5
     ports:
     - containerPort: 80`
