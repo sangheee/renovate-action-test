@@ -5,6 +5,7 @@
     ":dependencyDashboard",
     "docker:enableMajor"
   ],
+  "labels": ["test"],
   "regexManagers": [
     {
       "description": "Process variables dependencies",
@@ -27,23 +28,25 @@
       "matchStrings": [
         ".*[iI]mage:\\s+[\'\"`]?(?<depName>[^:]+):(?<currentValue>[^\\s\'\"`]+)[\'\"`]?([,\\s]*\\/\\/\\supdate: versioning=(?<versioning>.*))?"
       ],
-      versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
       "datasourceTemplate": "docker",
+      "labels": ["test"]
     },
     {
       "description": "Update Docker Image dependencies NewSpec struct in .+_test.go files",
       "fileMatch": [
         "_test.go$"
       ],
-      matchStringsStrategy: "combination",
+      "matchStringsStrategy": "combination",
       "matchStrings": [
         "Registry:\\s*[\"`](?<registry>[^\"`]*)[\"`]",
         "Name:\\s*[\"`](?<name>[^\"`]*)[\"`]",
         "Version:\\s*[\"`](?<currentValue>[^\"`]+)[\"`]([,\\s]*\\/\\/\\supdate: versioning=(?<versioning>.*))?"
       ],
-      depNameTemplate: "{{#if registry}}{{{registry}}}/{{/if}}{{{name}}}",
-      versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
-      datasourceTemplate: "docker",
+      "depNameTemplate": "{{#if registry}}{{{registry}}}/{{/if}}{{{name}}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
+      "datasourceTemplate": "docker",
+      "labels": ["test"]
     },
     {
       "fileMatch": [
@@ -54,7 +57,8 @@
         "thanos_image:\\s*\"(?<depName>.*)\"\\s*//",
         "thanos_version:\\s*\"(?<currentValue>.*)\"\\s*//"
       ],
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "docker",
+      "addLabels": ["main"]
     },
   ],
   kubernetes: {
@@ -68,7 +72,7 @@
   ],
   "platform": "github",
   "onboarding": false,
-  "requireConfig": false,
+  "requireConfig": 'ignored',
   "timezone": "Asia/Seoul",
   // repo config
   "repositories": [
