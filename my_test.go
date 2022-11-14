@@ -5,10 +5,10 @@ var testPod2 = `
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: mysql
 spec:
   containers:
-  - name: nginx
-    image: nginx:1.14.2
+  - name: mysql
+    image: mysql:5.7.39
     ports:
     - containerPort: 80`
