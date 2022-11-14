@@ -1,3 +1,3 @@
 go_version: 1.18 # update: datasource=golang-version depName=go versioning=npm
 PROMU_VERSION ?= 0.12.0 # update: datasource=github-releases depName=prometheus/promu extractVersion=^(?<version>.*) \\/.*$
-ETCD_VERSION ?= 3.4.20 # update: datasource=github-releases depName=etcd-io/etcd extractVersion=^v(?<version>.*)$
+ETCD_VERSION ?= 3.5.5 # update: datasource=github-releases depName=etcd-io/etcd extractVersion=^v(?<version>.*)$
