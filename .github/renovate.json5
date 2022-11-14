@@ -18,7 +18,8 @@
         ".*(=\\s?|:\\s)(?<currentValue>[v0-9.-]+)\\s#\\supdate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( extractVersion=(?<extractVersion>.+?))?( versioning=(?<versioning>.*?))?\\s"
       ],
       "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{/if}}",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "addLabels": ["main"]
     },
     {
       "description": "Update Docker Image dependencies in .+_test.go files",
@@ -30,7 +31,7 @@
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
       "datasourceTemplate": "docker",
-      "labels": ["test"]
+      "labels": ["test/test"]
     },
     {
       "description": "Update Docker Image dependencies NewSpec struct in .+_test.go files",
@@ -46,20 +47,8 @@
       "depNameTemplate": "{{#if registry}}{{{registry}}}/{{/if}}{{{name}}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}",
       "datasourceTemplate": "docker",
-      "labels": ["test"]
-    },
-    {
-      "fileMatch": [
-        "^main.yml$"
-      ],
-      "matchStringsStrategy": "combination",
-      "matchStrings": [
-        "thanos_image:\\s*\"(?<depName>.*)\"\\s*//",
-        "thanos_version:\\s*\"(?<currentValue>.*)\"\\s*//"
-      ],
-      "datasourceTemplate": "docker",
-      "addLabels": ["main"]
-    },
+      "labels": ["test/test"]
+    }
   ],
   kubernetes: {
     fileMatch: [
