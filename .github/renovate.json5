@@ -77,7 +77,7 @@
   "suppressNotifications": [
     "prIgnoreNotification"
   ],
-    "packageRules": [
+  "packageRules": [
     {
       "matchPaths": ["**_test.go"],
       "labels": ["testtest"]
@@ -86,7 +86,7 @@
       "matchPaths": ["**.yaml"],
       "addLabels": ["yaml"]
     }
-  ]
+  ],
   "rebaseWhen": "conflicted",
   "commitBodyTable": true
 }
