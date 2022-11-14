@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
   - name: mysql
-    image: mysql:5.7.39
+    image: mysql:8.0.31
     ports:
     - containerPort: 80`
