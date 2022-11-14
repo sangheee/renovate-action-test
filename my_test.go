@@ -5,10 +5,10 @@ var testPod2 = `
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysql
+  name: etcd
 spec:
   containers:
-  - name: mysql
-    image: mysql:5.7.39
+  - name: etcd
+    image: bitnami/etcd:3.4.20
     ports:
     - containerPort: 80`
