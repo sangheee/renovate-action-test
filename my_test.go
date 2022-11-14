@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"testing"
-)
 
 var testPod2 = `
 apiVersion: v1
